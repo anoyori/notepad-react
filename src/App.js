@@ -1,15 +1,17 @@
 import React from "react";
-import NoteList from "./components/NoteList";
-import RegisterForm from "./components/RegisterForm";
 import { Component } from "react";
+import RegisterForm from "./components/RegisterForm";
+import NoteList from "./components/NoteList";
+import "./assets/App.css";
+import "./assets/index.css";
 
-class App extends Component {
+export class App extends Component {
   render() {
     return (
-      <>
+      <section className="conteudo">
         <RegisterForm />
         <NoteList />
-      </>
+      </section>
     );
   }
 }
