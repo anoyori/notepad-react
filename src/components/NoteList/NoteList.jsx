@@ -6,11 +6,10 @@ export class NoteList extends Component {
   render() {
     return (
       <ul className="note-list">
-        {Array.of("trabalho", "Trabalho", "Estudos").map((categoria, index) => {
+        {this.props.notes.map((notes, index) => {
           return (
             <li key={index} className="note-list-item">
-              <div>{categoria}</div>
-              <NoteCard />
+              <NoteCard title={notes.title} text={notes.text} />
             </li>
           );
         })}
